@@ -15,9 +15,7 @@ public class Main {
             } else if(!Character.isLetter(username.charAt(0))) { // Memeriksa apakah karakter pertama username bukan huruf
                 System.out.println("Maaf, nama pengguna harus dimulai dengan huruf");
             } else {
-                Matcher matcher = Pattern.compile("^[A-Za-z][A-Za-z0-9]*$").matcher(username); // Mencocokan input user dengan pattern
-
-                if (!matcher.matches()) { // Memeriksa apakah username tidak sesuai dengan pola yang telah ditentukan
+                if (!username.matches("^[A-Za-z][A-Za-z0-9]*$")) { // Memeriksa apakah username tidak sesuai dengan pola yang telah ditentukan
                     System.out.println("Maaf, nama pengguna tidak boleh mengandung karakter");
                 } else {
                     System.out.println("Selamat nama pengguna valid");
